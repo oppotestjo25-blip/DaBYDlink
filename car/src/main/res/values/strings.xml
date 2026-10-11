@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DaBYDlink Car</string>
+    <string name="waiting_phone">Waiting for your phone</string>
+    <string name="step1">Put the phone and the car on the same Wi-Fi — easiest: turn on your phone\'s hotspot and join it from the car.</string>
+    <string name="step2">Open DaBYDlink on your phone and tap this car (or type the car address).</string>
+    <string name="step3">Pair the phone with the car over Bluetooth once, so sound plays through the car speakers.</string>
+    <string name="waiting_picture">Connected — waiting for the picture…</string>
+    <string name="blocked_title">Video hidden while driving</string>
+    <string name="blocked_body">Maps, music and calls keep working. The video comes back when the car stops.</string>
+    <string name="back">Back</string>
+    <string name="home">Home</string>
+    <string name="recents">Apps</string>
+    <string name="disconnect">Exit</string>
+</resources>

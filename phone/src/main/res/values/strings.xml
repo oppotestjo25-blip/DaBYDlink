@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DaBYDlink</string>
+    <string name="tagline">Your phone on your car screen</string>
+    <string name="stop_mirroring">Stop mirroring</string>
+    <string name="cars_nearby">Cars nearby</string>
+    <string name="searching">Looking for your car…\n\nOpen DaBYDlink Car on the car screen, and make sure the phone and the car are on the same Wi-Fi (for example, the car joined your phone\'s hotspot).</string>
+    <string name="manual_title">Or connect by the address shown on the car screen</string>
+    <string name="ip_hint">e.g. 192.168.43.120</string>
+    <string name="connect">Connect</string>
+    <string name="setup">Setup</string>
+    <string name="touch_title">Touch control from the car</string>
+    <string name="touch_hint">If Android says \"Restricted setting\": open App info, tap ⋮ (top right) → Allow restricted settings, then turn it on again.</string>
+    <string name="open_app_info">Open App info</string>
+    <string name="location_title">Driving guard (location)</string>
+    <string name="notif_title">Status notification</string>
+    <string name="turn_on">Turn on</string>
+    <string name="allow">Allow</string>
+    <string name="settings">Settings</string>
+    <string name="quality">Video quality</string>
+    <string name="q_smooth">Smooth</string>
+    <string name="q_balanced">Balanced</string>
+    <string name="q_sharp">Sharp</string>
+    <string name="guard_title">Hide video while driving</string>
+    <string name="guard_detail">When the car is moving, YouTube and other video apps are hidden on the car screen. Maps, music and calls keep working.</string>
+    <string name="tips">Tips</string>
+    <string name="tips_body">• Turn your phone sideways for full-screen YouTube and Maps on the car display.\n• Sound plays through the car speakers over Bluetooth, so pair your phone with the car once.\n• Keep the phone charging; the screen stays on (dimmed) while mirroring.\n• Use 5 GHz Wi-Fi/hotspot for the smoothest picture.</string>
+    <string name="accessibility_description">Lets DaBYDlink replay your taps and swipes from the car screen on this phone, and see which app is open so video can be hidden while driving. Nothing is read from your screen content.</string>
+</resources>

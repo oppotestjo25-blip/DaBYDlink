@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Control dock (driver side) -->
+        <LinearLayout
+            android:id="@+id/dock"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <LinearLayout android:id="@+id/btnBack" style="@style/DockButton">
+                <ImageView style="@style/DockIcon" android:contentDescription="@string/back" android:src="@drawable/ic_back" />
+                <TextView style="@style/DockLabel" android:text="@string/back" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnHome" style="@style/DockButton">
+                <ImageView style="@style/DockIcon" android:contentDescription="@string/home" android:src="@drawable/ic_home" />
+                <TextView style="@style/DockLabel" android:text="@string/home" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnRecents" style="@style/DockButton">
+                <ImageView style="@style/DockIcon" android:contentDescription="@string/recents" android:src="@drawable/ic_recents" />
+                <TextView style="@style/DockLabel" android:text="@string/recents" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnDisconnect" style="@style/DockButton">
+                <ImageView style="@style/DockIcon" android:contentDescription="@string/disconnect" android:src="@drawable/ic_exit" />
+                <TextView style="@style/DockLabel" android:text="@string/disconnect" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Phone picture -->
+        <FrameLayout
+            android:id="@+id/videoContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <SurfaceView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/waitingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/waiting_picture"
+                android:textColor="@color/muted"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/blockedOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="40dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_brand" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/blocked_title"
+                    android:textColor="@color/text"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/blocked_body"
+                    android:textColor="@color/muted"
+                    android:textSize="19sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Idle / pairing screen -->
+    <LinearLayout
+        android:id="@+id/idleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_idle"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_brand" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="DaBYDlink"
+                android:textColor="@color/text"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/waiting_phone"
+                android:textColor="@color/muted"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_chip"
+                android:paddingStart="18dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/accent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/StepRow">
+                <TextView style="@style/StepNumber" android:text="1" />
+                <TextView style="@style/StepText" android:text="@string/step1" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StepRow">
+                <TextView style="@style/StepNumber" android:text="2" />
+                <TextView style="@style/StepText" android:text="@string/step2" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StepRow">
+                <TextView style="@style/StepNumber" android:text="3" />
+                <TextView style="@style/StepText" android:text="@string/step3" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
